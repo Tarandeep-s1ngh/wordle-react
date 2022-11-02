@@ -17,6 +17,7 @@ body {
 
 .title {
     display: inline-block;
+    margin-left: 3rem;
 }
 
 .subscript {
