@@ -35,6 +35,7 @@ body {
     width: 60px;
     height: 60px;
     border: 1px solid #bbb;
+    color: white;
     margin: 4px;
     text-align: center;
     line-height: 60px;
@@ -46,14 +47,17 @@ body {
   .row > div.green {
     background: #5ac85a;
     border-color: #5ac85a;
+    color: black;
   }
   .row > div.grey {
     background: #a1a1a1;
     border-color: #a1a1a1;
+    color: black;
   }
   .row > div.yellow {
     background: #e2cc68;
     border-color: #e2cc68;
+    color: black;
   }
 
   .keypad {
