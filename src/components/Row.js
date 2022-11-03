@@ -28,11 +28,7 @@ export const Row = ({ guess, currentGuess }) => {
 
   return (
     <div className="row">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      {[...Array(5)].map((_, idx) => <div key={idx}></div>)}
     </div>
   );
 };
