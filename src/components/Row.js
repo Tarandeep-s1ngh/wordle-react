@@ -1,11 +1,12 @@
 import React from "react";
+import { Cell } from "./Cell";
 
 export const Row = ({ guess, currentGuess }) => {
   if (guess) {
     return (
       <div className="row past">
         {guess.map((letter, i) => (
-          <div key={i} className={letter.color}>{letter.key}</div>
+          <Cell colorClass={letter.color} finalLetter={letter.key} index={i} />
         ))}
       </div>
     );
@@ -17,10 +18,10 @@ export const Row = ({ guess, currentGuess }) => {
     return (
         <div className="row current">
             {letters.map((letter, i) => (
-                <div key={i} className="filled">{letter}</div>
+                <Cell colorClass="filled" finalLetter={letter} index={i} />
             ))}
             {[...Array(5 - letters.length)].map((_,i) => {
-                return <div key={i}></div>
+                return <Cell index={i} />
             })}
         </div>
     )
@@ -28,7 +29,7 @@ export const Row = ({ guess, currentGuess }) => {
 
   return (
     <div className="row">
-      {[...Array(5)].map((_, idx) => <div key={idx}></div>)}
+      {[...Array(5)].map((_, i) => <Cell key={i} index={i} />)}
     </div>
   );
 };
