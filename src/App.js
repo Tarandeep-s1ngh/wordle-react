@@ -19,7 +19,10 @@ function App() {
     <div className="App">
       <h1 className='gradient-text title'>WORDLE</h1>
       <small className='subscript'>By Taran</small>
+
+      {/* SOLUTION FOR TESTING */}
       <small>{solution}</small>
+
       {solution && <Wordle solution={solution}/>}
     </div>
   );
