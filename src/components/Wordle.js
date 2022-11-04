@@ -34,7 +34,7 @@ export const Wordle = ({solution}) => {
     <div>
         {/* <div>solution - {solution}</div> */}
         <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
-        <Keypad usedKeys={usedKeys} />
+        <Keypad usedKeys={usedKeys} handleKeyup={handleKeyup} />
         {showModal && <ResultModal isCorrect={isCorrect} turn={turn} solution={solution} />}
     </div>
   )

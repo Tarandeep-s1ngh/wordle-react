@@ -104,11 +104,12 @@ const useWordle = (solution) => {
             })
             return
         }
-        
+
+        let currKey = key.toLowerCase()
         if(/^[A-Za-z]$/.test(key)) {
             if(currentGuess.length < 5) {
                 setCurrentGuess((prev) => {
-                    return prev + key})
+                    return prev + currKey})
             }
         }
 

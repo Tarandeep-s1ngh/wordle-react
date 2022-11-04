@@ -6,7 +6,7 @@ export const Row = ({ guess, currentGuess }) => {
     return (
       <div className="row past">
         {guess.map((letter, i) => (
-          <Cell colorClass={letter.color} finalLetter={letter.key} index={i} />
+          <Cell key={i} colorClass={letter.color} finalLetter={letter.key} index={i} />
         ))}
       </div>
     );
@@ -18,10 +18,10 @@ export const Row = ({ guess, currentGuess }) => {
     return (
         <div className="row current">
             {letters.map((letter, i) => (
-                <Cell colorClass="filled" finalLetter={letter} index={i} />
+                <Cell key={i} colorClass="filled" finalLetter={letter} index={i} />
             ))}
             {[...Array(5 - letters.length)].map((_,i) => {
-                return <Cell index={i} />
+                return <Cell key={i} index={i} />
             })}
         </div>
     )

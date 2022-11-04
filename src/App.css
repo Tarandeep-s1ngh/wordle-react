@@ -83,6 +83,7 @@ body {
     display: inline-block;
     border-radius: 6px;
     line-height: 50px;
+    cursor: pointer;
   }
   .keypad > div.green {
     background: #5ac85a;
