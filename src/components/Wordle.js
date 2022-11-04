@@ -16,14 +16,14 @@ export const Wordle = ({solution}) => {
         if(isCorrect) {
             setTimeout(() => {
                 setShowModal(true)
-            }, 1000)
+            }, 500)
             window.removeEventListener('keyup', handleKeyup)
         }
 
         if(turn > 5) {
             setTimeout(() => {
                 setShowModal(true)
-            }, 1000)
+            }, 500)
             window.removeEventListener('keyup', handleKeyup)
         }
 
@@ -32,7 +32,6 @@ export const Wordle = ({solution}) => {
 
   return (
     <div>
-        {/* <div>solution - {solution}</div> */}
         <Grid currentGuess={currentGuess} guesses={guesses} turn={turn} />
         <Keypad usedKeys={usedKeys} handleKeyup={handleKeyup} />
         {showModal && <ResultModal isCorrect={isCorrect} turn={turn} solution={solution} />}
