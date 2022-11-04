@@ -1,4 +1,4 @@
-{
+export const constants = {
   "letters": [
     { "key": "A" },
     { "key": "B" },
