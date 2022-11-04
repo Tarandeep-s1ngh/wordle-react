@@ -78,7 +78,7 @@ const useWordle = (solution) => {
 
     const handleKeyup = ({key}) => {
 
-        if(key === "Enter") {
+        if(key === "Enter" || key === "↵") {
             if(turn > 5) {
                 console.log("Game Up");
                 return
@@ -98,7 +98,7 @@ const useWordle = (solution) => {
             addNewGuess(formatted)
         }
 
-        if(key === "Backspace") {
+        if(key === "Backspace" || key === "⌫") {
             setCurrentGuess((prev) => {
                 return prev.slice(0, -1)
             })
