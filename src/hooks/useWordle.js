@@ -80,17 +80,14 @@ const useWordle = (solution) => {
 
         if(key === "Enter" || key === "↵") {
             if(turn > 5) {
-                console.log("Game Up");
                 return
             }
 
             if(history.includes(currentGuess)) {
-                console.log("Repeated Word");
                 return
             }
 
             if(currentGuess.length !== 5) {
-                console.log("Word not long enough");
                 return
             }
 
