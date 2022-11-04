@@ -123,3 +123,17 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
   }
+  .modalBtn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(251, 129, 110);
+    background-color: white;
+    border: 1px solid rgb(251, 129, 110);
+    border-radius: 5px;
+  }
+  .modalBtn:hover {
+    background-color: rgb(251, 129, 110);
+    color: white;
+    cursor: pointer;
+  }
